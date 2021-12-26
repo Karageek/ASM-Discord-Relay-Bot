@@ -52,6 +52,7 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
     console.log("ASM Relay online");
+    // client.channels.cache.get("Channel ID Here").send("*ASM Relay Bot Online*");
 
     const CLIENT_ID = client.user.id;
     
@@ -98,41 +99,5 @@ client.on("interactionCreate", async interaction => {
 
 });
 
-client.on("messageCreate", message => {
-    if (message.content.startsWith("%")) {
-        if (message.content.substring(1) === "asmtest") {
-            message.channel.send("asm!info abermod");
-            sleep(3000)
-                .then(() => message.channel.send("asm!info crystalmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info extinctionmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info gen2mod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info islandmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info lost"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info lostmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info ragmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info patreonbreed"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info patreonhunting"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info patreonislandmod"))
-                .then(() => sleep(3000))
-                .then(() => message.channel.send("asm!info pvprag"))
-        }
-    }
-})
-client.on("messageCreate", message => {
-    if (message.content.startsWith("%")) {
-        if (message.content.substring(1) === "asm") {
-            message.channel.send("asm!info abermod");
-        }
-    }
-})
 
 client.login(process.env.TOKEN)
