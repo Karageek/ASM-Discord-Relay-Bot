@@ -52,7 +52,7 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
     console.log("ASM Relay online");
-    // client.channels.cache.get("Channel ID Here").send("*ASM Relay Bot Online*");
+    // client.channels.cache.get("Channel ID Here").send("*ASM Relay Bot Online*"); // This will post a message to the specified channel Remove // at start of line to enable
 
     const CLIENT_ID = client.user.id;
     
